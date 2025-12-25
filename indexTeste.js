@@ -1,47 +1,42 @@
-function convertImage() {
-    const fileInput = document.getElementById('imageInput');
-    const outputArea = document.getElementById('output');
-    const imagePreview = document.getElementById('imagePreview');
+/**
+ * Verifica se o caractere com o código 65 ('A') está presente no textarea.
+ * @param {string} elementId O ID do elemento textarea.
+ * @returns {number|null} Retorna 65 se 'A' for encontrado, senão null.
+ */
+function verificarTextareaParaCode65(elementId) {
+  // Obtém o elemento textarea pelo ID
+  const textarea = document.getElementById(elementId);
 
-    const file = fileInput.files[0];
+  // Verifica se o elemento existe
+  if (!textarea) {
+    console.error("Elemento textarea não encontrado com o ID fornecido:", elementId);
+    return null; // Retorna null se o elemento não for encontrado
+  }
 
-    // Validação básica para garantir que um arquivo foi selecionado e é uma imagem JPEG
-    if (!file) {
-        alert('Por favor, selecione um arquivo de imagem.');
-        return;
-    }
+  // Obtém o valor (conteúdo) do textarea
+  const valor = textarea.value;
 
-    if (file.type !== 'image/jpeg' && file.type !== 'image/jpg') {
-        alert('Por favor, selecione um arquivo JPEG válido.');
-        return;
-    }
+  // O código 65 representa a letra maiúscula 'A' em ASCII/Unicode.
+  const code65 = 65;
+  const caractereA = String.fromCharCode(code65); // 'A'
 
-    const reader = new FileReader();
+  // Verifica se o caractere 'A' está presente no valor
+  if (valor.includes(caractereA)) {
+    console.log(`Caractere '${caractereA}' (código 65) encontrado!`);
+    return code65; // Retorna 65 se encontrado
+  } else {
+    console.log(`Caractere '${caractereA}' (código 65) não encontrado.`);
+    return null; // Retorna null se não encontrado
+  }
+}
 
-    // A função onload é chamada quando a leitura do arquivo é concluída
-    reader.onload = function(event) {
-        // event.target.result contém a Data URL (string Base64 completa)
-        const base64String = event.target.result;
-        
-        // Exibe a string Base64 na área de texto
-        outputArea.value = base64String;
-        
-        // Exibe uma prévia da imagem usando a string Base64
-        imagePreview.src = base64String;
-        imagePreview.style.display = 'block';
+// --- Exemplo de Uso ---
 
-        console.log("Conversão concluída. String Base64 gerada.");
-    };
+// Suponha que você tenha um textarea no seu HTML com id="meuTextarea"
+// <textarea id="meuTextarea"></textarea>
+// <button onclick="executarVerificacao()">Verificar</button>
 
-    // A função onerror é chamada se ocorrer um erro na leitura do arquivo
-    reader.onerror = function(error) {
-        console.error("Erro ao ler o arquivo:", error);
-        alert("Ocorreu um erro ao converter o arquivo.");
-    };
-
-    // Lê o conteúdo do arquivo como uma Data URL (que é Base64 codificado)
-    reader.readAsDataURL(file);
-
-
-    
+function executarVerificacao() {
+  const resultado = verificarTextareaParaCode65('meuTextarea');
+  alert("O resultado da verificação é: " + resultado);
 }

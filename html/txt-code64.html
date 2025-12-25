@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertedor</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body class="body">
     <h1>Compiler</h1>
-    <h3>Archive</h3>
+    <h3>Texto</h3>
     <form action="/encode" method="post">
         <label for="archive-to-encode">Anexa o arquivo abaixo:</label><br>
-        <input type="file" id="archive-to-encode" class="archive-to-encode" ><br>
+        <textarea id="areadoTextoPrompt" rows="4" cols="50"></textarea>>
     </form>
     <br>
-    <button onclick="converteImagem()"">Converter</button>
+    <button onclick="converteTexto()">Converter</button>
 
     <h3>Decompilador</h3>
     <form action="/decode" method="post">
         <label for="text-to-decode">Texto em code 64</label><br>
-        <textarea id="areaDoTexto" name="text-to-decode" rows="4" cols="50" disabled></textarea><br>
+        <textarea id="areaDoTextoResposta" name="text-to-decode" rows="4" cols="50" disabled></textarea><br>
 
 
     <script src="/conversor/index.js"></script>
