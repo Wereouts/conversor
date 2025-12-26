@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexacimal</title>
+</head>
+
+<body class="body">
+    <h1>Codificadores</h1>
+    <h3>Hexacimal</h3>
+    <form action="/encode" method="post">
+        <label for="archive-to-encode">Anexa o arquivo abaixo:</label><br>
+        <textarea id="areadoTextoPrompt" rows="4" cols="50"></textarea>
+    </form>
+    <br>
+    <button onclick="converteHexa()">Converter</button>
+
+    <h3>Compilador</h3>
+    <form>
+        <label for="text-to-decode">Texto em code 64</label><br>
+        <textarea id="areaDoTextoResposta" name="text-to-decode" rows="4" cols="50" disabled></textarea><br>
+        <button onclick="copiarTexto()">Copiar</button>
+
+
+    <script src='/script/compilador/index.js'></script>
+</body>
+
+</html>

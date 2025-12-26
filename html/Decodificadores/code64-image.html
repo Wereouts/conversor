@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem</title>
+</head>
+<body>
+    <h1>Decodificador</h1>
+    <h3>Escreva seu código</h3>
+    <form>
+        <label for="archive-to-encode">Escreva seu code64 abaixo</label><br>
+        <textarea id="areaDoCodigo" rows="4" cols="50"></textarea><br>
+        <button onclick="decodificaImagem()" type="button">Converter</button>
+    </form>
+
+    <h3>Decompilador</h3>
+    <label for="response-to-code"></label><br>
+    <img id="imagePng" alt="Imagem PNG convertida de Base64"><br>
+    <br>
+    <button onclick="baixarImagem()">Baixar</button>
+
+
+    <script src="/script/decompilador/index.js"></script>
+
+
+
+    
+</body>
+</html>
