@@ -92,3 +92,25 @@ function mudarformatoHex() {
     textoAreaResposta.value = format;
 
 }
+
+
+function converteBinario () {
+    const textoAreaPrompt = document.getElementById("areaDoCodigo");
+    const textoAreaResposta = document.getElementById("areaDaResposta");
+
+    const code64 = textoAreaPrompt.value.trim();
+
+    const decodeString = atob(code64); 
+
+    let binario = "";
+
+    for (let i = 0; i < decodeString.length; i++) {
+        binario += decodeString
+            .charCodeAt(i)     // código do caractere
+            .toString(2)       // decimal → binário
+            .padStart(8, "0")  // 8 bits
+            + " ";
+    }
+
+    textoAreaResposta.value = binario.trim();
+}

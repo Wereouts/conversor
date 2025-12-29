@@ -13,7 +13,7 @@ async function copiarTexto() {
 
 
 function converteImagem() {
-  const arquivoEscolhido = document.querySelector(".archive-to-encode");
+  const arquivoEscolhido = document.getElementById("archive-to-encode");
   const textoArea = document.getElementById("areaDoTextoResposta");
 
   if (!arquivoEscolhido.files || !arquivoEscolhido.files[0]) {
@@ -43,7 +43,7 @@ function converteImagem() {
 }
 
 function converteArquivo() {
-  const arquivoEscolhido = document.querySelector(".archive-to-encode");
+  const arquivoEscolhido = document.getElementById("archive-to-encode");
   const textoArea = document.getElementById("areaDoTextoResposta");
 
   if (!arquivoEscolhido.files || !arquivoEscolhido.files[0]) {

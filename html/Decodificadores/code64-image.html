@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagem</title>
+    <link rel="stylesheet" href="/Css/Codificadores/style.css">
 </head>
-<body>
-    <h1>Decodificador</h1>
-    <h3>Escreva seu código</h3>
-    <form>
-        <label for="archive-to-encode">Escreva seu code64 abaixo</label><br>
-        <textarea id="areaDoCodigo" rows="4" cols="50"></textarea><br>
-        <button onclick="decodificaImagem()" type="button">Converter</button>
-    </form>
+<body class="page">
 
-    <h3>Decompilador</h3>
-    <label for="response-to-code"></label><br>
-    <img id="imagePng" alt="Imagem PNG convertida de Base64"><br>
-    <br>
-    <button onclick="baixarImagem()">Baixar</button>
+    <div class="container">
+        <h1>Decodificador</h1>
+
+        <section class="card">
+            <h3>Escreva seu código</h3>
+            <form class="form">
+                <label for="areaDoCodigo">Escreva seu code64 abaixo</label>
+                <textarea id="areaDoCodigo" rows="4"></textarea>
+            </form>
+            <button class="btn" onclick="decodificaImagem()" type="button">Converter</button>
+        </section>
+
+        <section class="card">
+            <h3>Decompilador</h3>
+            <div class="image-display" style="text-align: center; margin-bottom: 15px;">
+                <img id="imagePng" alt="Imagem PNG convertida de Base64" style="max-width: 100%; height: auto; border-radius: 4px;">
+            </div>
+            <button class="btn secondary" onclick="baixarImagem()">Baixar</button>
+        </section>
+    </div>
 
     <script src="/script/decompilador/index.js"></script>
-
-
-
-    
 </body>
 </html>

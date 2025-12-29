@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texto</title>
+    <title>Texto - Codificador</title>
+    <link rel="stylesheet" href="/Css/Codificadores/style.css">
 </head>
-<body class="body">
-    <h1>Compiler</h1>
-    <h3>Codificadores</h3>
-    <form action="/encode" method="post">
-        <label for="archive-to-encode">Anexa o arquivo abaixo:</label><br>
-        <textarea id="areadoTextoPrompt" rows="4" cols="50"></textarea>
-    </form>
-    <br>
-    <button onclick="converteTexto()">Converter</button>
+<body class="page">
 
-    <h3>Compilador</h3>
-    <form>
-        <label for="text-to-decode">Texto em code 64</label><br>
-        <textarea id="areaDoTextoResposta" name="text-to-decode" rows="4" cols="50" disabled></textarea><br>
-        <button onclick="copiarTexto()">Copiar</button>
+    <div class="container">
+        <h1>Codificador de Texto</h1>
 
+        <section class="card">
+            <h3>Texto</h3>
+            <form class="form">
+                <label for="areadoTextoPrompt">Anexe o arquivo abaixo:</label>
+                <textarea id="areadoTextoPrompt" rows="4" placeholder="Digite ou cole o texto aqui..."></textarea>
+            </form>
+            <button class="btn" onclick="converteTexto()">Converter</button>
+        </section>
+
+        <section class="card">
+            <h3>Compilador</h3>
+            <form class="form">
+                <label for="areaDoTextoResposta">Texto em code 64</label>
+                <textarea id="areaDoTextoResposta" name="text-to-decode" rows="4" disabled></textarea>
+                
+                <button class="btn secondary" type="button" onclick="copiarTexto()">
+                    Copiar
+                </button>
+            </form>
+        </section>
+    </div>
 
     <script src='/script/compilador/index.js'></script>
 </body>

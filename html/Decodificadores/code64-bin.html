@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hexadecimal</title>
+    <title>Binario</title>
     <link rel="stylesheet" href="/Css/Codificadores/style.css">
 </head>
 <body class="page">
@@ -17,19 +17,16 @@
                 <label for="areaDoCodigo">Escreva seu code64 abaixo</label>
                 <textarea id="areaDoCodigo" rows="4"></textarea>
             </form>
-            <button class="btn" onclick="converteHex()" type="button">Converter</button>
+            <button class="btn" onclick="converteBinario()" type="button">Converter</button>
         </section>
 
         <section class="card">
             <h3>Decompilador</h3>
             <form class="form">
-                <label for="areaDaResposta">Seu Hexadecimal decodificado</label>
+                <label for="areaDaResposta">Seu binário decodificado</label>
                 <textarea id="areaDaResposta" rows="4" disabled></textarea>
-
-                <div class="button-group">
-                    <button class="btn secondary" onclick="mudarformatoHex()" type="button">Incluir Espaços</button>
-                    <button class="btn secondary" onclick="copiarTexto()" type="button">Copiar</button>
-                </div>
+                
+                <button class="btn secondary" onclick="copiarTexto()" type="button">Copiar</button>
             </form>
         </section>
     </div>

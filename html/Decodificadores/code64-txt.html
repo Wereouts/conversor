@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Texto</title>
+    <link rel="stylesheet" href="/Css/Codificadores/style.css">
 </head>
-<body>
-    <h1>Decodificador</h1>
-    <h3>Escreva seu código</h3>
-    <form>
-        <label for="archive-to-encode">Escreva seu code64 abaixo</label><br>
-        <textarea id="areaDoCodigo" rows="4" cols="50"></textarea><br>
-        <button onclick="converteTexto()" type="button">Converter</button>
-    </form>
+<body class="page">
 
-    <h3>Decompilador</h3>
-    <label for="archive-to-encode">Seu texto decodificado</label><br>
-    <textarea id="areaDaResposta" rows="4" cols="50" disabled></textarea><br>
-    <button onclick="copiarTexto()" type="button">Copiar</button>
+    <div class="container">
+        <h1>Decodificador</h1>
+
+        <section class="card">
+            <h3>Escreva seu código</h3>
+            <form class="form">
+                <label for="areaDoCodigo">Escreva seu code64 abaixo</label>
+                <textarea id="areaDoCodigo" rows="4"></textarea>
+            </form>
+            <button class="btn" onclick="converteTexto()" type="button">Converter</button>
+        </section>
+
+        <section class="card">
+            <h3>Decompilador</h3>
+            <form class="form">
+                <label for="areaDaResposta">Seu texto decodificado</label>
+                <textarea id="areaDaResposta" rows="4" disabled></textarea>
+                
+                <button class="btn secondary" onclick="copiarTexto()" type="button">Copiar</button>
+            </form>
+        </section>
+    </div>
 
     <script src="/script/decompilador/index.js"></script>
-
-
-
-
-    
 </body>
 </html>

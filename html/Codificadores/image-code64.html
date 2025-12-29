@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagem</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Css/Codificadores/style.css">
 </head>
-<body class="body">
-    <h1>Codificadores</h1>
-    <h3>Imagem</h3>
-    <form action="/encode" method="post">
-        <label for="archive-to-encode">Anexa o arquivo abaixo:</label><br>
-        <input type="file" id="archive-to-encode" class="archive-to-encode" ><br>
-    </form>
-    <br>
-    <button onclick="converteImagem()"">Converter</button>
+<body class="page">
 
-    <h3>Compilador</h3>
-    <form>
-        <label for="text-to-decode">Texto em code 64</label><br>
-        <textarea id="areaDoTextoResposta" name="text-to-decode" rows="4" cols="50" disabled></textarea><br>
-        <button onclick="copiarTexto()">Copiar</button>
+    <div class="container">
+        <h1>Codificador de Imagem</h1>
 
+        <section class="card">
+            <h3>Imagem</h3>
 
-    <script src='/script/compilador/index.js'></script>
+            <form class="form">
+                <label for="archive-to-encode">Anexe a imagem abaixo:</label>
+                <input type="file" id="archive-to-encode">
+            </form>
+
+            <button class="btn" onclick="converteImagem()">Converter</button>
+        </section>
+
+        <section class="card">
+            <h3>Compilador</h3>
+
+            <form class="form">
+                <label for="areaDoTextoResposta">Texto em Base64</label>
+                <textarea id="areaDoTextoResposta" rows="4" disabled></textarea>
+
+                <button class="btn secondary" type="button" onclick="copiarTexto()">
+                    Copiar
+                </button>
+            </form>
+        </section>
+    </div>
+
+    <script src="/script/compilador/index.js"></script>
 </body>
 </html>
