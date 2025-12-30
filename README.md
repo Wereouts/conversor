@@ -36,7 +36,7 @@ Clone este repositório:
 
 Bash
 
-git clone https://github.com/SeuUsuario/conversor.git
+git clone https://github.com/Wereouts/conversor.git
 Abra o arquivo index.html em qualquer navegador moderno.
 
 Nenhuma dependência externa ou servidor é necessário (roda inteiramente no cliente).
